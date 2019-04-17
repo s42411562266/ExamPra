@@ -40,17 +40,11 @@ public class MainActivity extends AppCompatActivity {
         RGBB[5][0]=43;RGBB[5][1]=0;RGBB[5][2]=255;
         RGBB[6][0]=87;RGBB[6][1]=0;RGBB[6][2]=255;//purple
         SpannableStringBuilder style = new SpannableStringBuilder(output);
-        //style.setSpan(new BackgroundColorSpan(Color.RED),2,5, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);     //设置指定位置textview的背景颜色
+        //style.setSpan(new BackgroundColorSpan(Color.RED),2,5, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
         style.setSpan(new ForegroundColorSpan(Color.RED), 0, 2, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
         style.setSpan(new ForegroundColorSpan(Color.rgb(0, 255, 0)), 2, 4, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
-        for (int i=0;i<output.length();i++){
-            /*if(i+1>=output.length()){
-                style.setSpan(new ForegroundColorSpan(Color.rgb(RGBB[i%7][0],RGBB[i%7][1],RGBB[i%7][2])), i, i+1, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
-                break;
-            }*/
+        for (int i=0;i<output.length();i++)
             style.setSpan(new ForegroundColorSpan(Color.rgb(RGBB[i%7][0],RGBB[i%7][1],RGBB[i%7][2])), i, i + 1, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
-        }
         text.setText(style);
     }
-
 }
