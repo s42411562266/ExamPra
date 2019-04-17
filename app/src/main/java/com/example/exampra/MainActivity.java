@@ -24,13 +24,10 @@ public class MainActivity extends AppCompatActivity {
     TextView text;
     int size=40;
     public void changeColor(View v) {
-        str = findViewById(R.id.editText);
-        text = findViewById(R.id.textView);
+        str=findViewById(R.id.editText);
+        text=findViewById(R.id.textView);
         String output = str.getText().toString();
         text.setTextSize(size);
-        /*text.setText(str.getText().toString());
-        String test = "<font color=\"#cc0029\">Erste Farbe</font> <font color=\"#ffcc00\">zweite Farbe</font>";
-        text.setText(Html.fromHtml(test));*/
         int [][]RGBB=new int[7][3];
         RGBB[0][0]=255;RGBB[0][1]=0;RGBB[0][2]=0;//red
         RGBB[1][0]=255;RGBB[1][1]=165;RGBB[1][2]=0;//orange
@@ -40,11 +37,8 @@ public class MainActivity extends AppCompatActivity {
         RGBB[5][0]=43;RGBB[5][1]=0;RGBB[5][2]=255;
         RGBB[6][0]=87;RGBB[6][1]=0;RGBB[6][2]=255;//purple
         SpannableStringBuilder style = new SpannableStringBuilder(output);
-        //style.setSpan(new BackgroundColorSpan(Color.RED),2,5, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
-        style.setSpan(new ForegroundColorSpan(Color.RED), 0, 2, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
-        style.setSpan(new ForegroundColorSpan(Color.rgb(0, 255, 0)), 2, 4, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
         for (int i=0;i<output.length();i++)
-            style.setSpan(new ForegroundColorSpan(Color.rgb(RGBB[i%7][0],RGBB[i%7][1],RGBB[i%7][2])), i, i + 1, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
+            style.setSpan(new ForegroundColorSpan(Color.rgb(RGBB[i%7][0],RGBB[i%7][1],RGBB[i%7][2])),i,i+1,Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
         text.setText(style);
     }
 }

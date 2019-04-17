@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ExamPra</string>
+    <string name="app_name">來換文字顏色吧!</string>
     <string name="input">請輸入字串</string>
     <string name="Change" >換顏色!</string>
 </resources>
