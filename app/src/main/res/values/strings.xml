@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ExamPra</string>
+    <string name="input" >input String</string>
+    <string name="Change" >change color</string>
+</resources>
